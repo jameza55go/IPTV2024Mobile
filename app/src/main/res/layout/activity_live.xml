@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.liveTV.LiveActivity"
+    android:keepScreenOn="true"
+    android:background="@color/black"
+    android:id="@+id/monitor"
+    >
+
+    <VideoView
+        android:id="@+id/androidplayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt_live_type"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/arrow_right"
+        android:background="@drawable/bt_select_style_4"
+        app:layout_constraintStart_toEndOf="@+id/list_live_type" />
+
+    <ListView
+        android:id="@+id/list_live_type"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/list_live_main"
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_live_type" />
+
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/list_live_sub"
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@+id/list_live_main" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:id="@+id/remote"
+        android:gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="48dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

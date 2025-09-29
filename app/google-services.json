@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "578944778414",
+    "project_id": "newiptv-e18a5",
+    "storage_bucket": "newiptv-e18a5.appspot.com",
+    "firebase_url": "https://newiptv-e18a5-default-rtdb.asia-southeast1.firebasedatabase.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578944778414:android:a59804901c1bc49c67ad3f",
+        "android_client_info": {
+          "package_name": "com.iptv.newiptvmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ6E20YhB1BfnDRizlJ4By4aJGBRjmGcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

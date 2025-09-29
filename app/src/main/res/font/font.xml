@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://www.w3.org/1999/xhtml"
+    tools:ignore="NamespaceTypo">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/kanitregular" />
+
+</font-family>

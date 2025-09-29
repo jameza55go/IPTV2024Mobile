@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/logo"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/high_logo"
+    android:adjustViewBounds="true"
+    android:background="@drawable/bt_select_transparent_and_white_border">
+
+</ImageView>

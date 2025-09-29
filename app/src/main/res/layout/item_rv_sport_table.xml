@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bt_all"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bt_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bt_select_sport_table"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_card_sport_table"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="@dimen/sport_topic_margin"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_coner_20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sport_topic_padding">
+
+            <ImageView
+                android:id="@+id/logo_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:adjustViewBounds="true"
+                android:src="@drawable/test_icon_sport"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/name_sport"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Serie A"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+            <LinearLayout
+
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_card_sport_table"
+                android:layout_weight="5"
+                android:background="@drawable/bg_white_coner_20"
+                android:padding="@dimen/sport_topic_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="5dp">
+
+                <ImageView
+                    android:id="@+id/logo_team_a"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/test_icon_sport" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/text_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="29/10/2023"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center"
+                            android:text="02:00"
+                            android:textColor="@color/red"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/text_date" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/text_vs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="วูล์ฟแฮมป์ตัน วันเดอร์ส - นิวคลาสเซิล ยูไนเต็ด"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/logo_team_b"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/test_icon_sport" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/bt_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:background="@color/black"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="5dp"
+                    android:text="ดูรายการสด"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_card_sport_table"
+            android:layout_marginStart="@dimen/sport_topic_margin"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_coner_20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/sport_topic_padding">
+
+            <TextView
+                android:id="@+id/text_status_live"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/live"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_live_size"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img_status_live"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/offline"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chanel_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/layout_ch1"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch1"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch1"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch1"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch1"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch1"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch1"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ch2"
+            android:visibility="gone"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch2"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="10dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch2"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch2"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch2"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch2"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch2"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ch3"
+            android:visibility="gone"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch3"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="10dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch3"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch3"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch3"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch3"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch3"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ch4"
+            android:visibility="gone"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch4"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="10dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch4"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch4"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch4"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch4"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch4"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ch5"
+            android:visibility="gone"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch5"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="10dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch5"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch5"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch5"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch5"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch5"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ch6"
+            android:visibility="gone"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch6"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="10dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch6"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch6"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch6"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch6"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch6"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ch7"
+            android:visibility="gone"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch7"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="10dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch7"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch7"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch7"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch7"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch7"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ch8"
+            android:visibility="gone"
+            android:layout_width="@dimen/width_image_sport_chanel"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sport_ch"
+            android:layout_marginEnd="@dimen/margin_sport_ch">
+
+            <LinearLayout
+                android:id="@+id/bg_logo_ch8"
+                android:layout_width="@dimen/bg_logo_lang_width"
+                android:layout_height="@dimen/bg_logo_lang_width"
+                android:background="@drawable/bg_white_rounded"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bg_ch8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/bg_logo_lang_margin"
+                android:background="@drawable/bg_white_coner_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ch_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="10dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    app:riv_corner_radius="10dp" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo_lang_ch8"
+                android:layout_width="@dimen/logo_lang_width"
+                android:layout_height="@dimen/logo_lang_width"
+                app:layout_constraintBottom_toBottomOf="@+id/bg_logo_ch8"
+                app:layout_constraintEnd_toEndOf="@+id/bg_logo_ch8"
+                app:layout_constraintStart_toStartOf="@+id/bg_logo_ch8"
+                app:layout_constraintTop_toTopOf="@+id/bg_logo_ch8"
+                app:riv_oval="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="110dp"
+    android:layout_height="160dp"
+    android:background="@color/transparent"
+    android:id="@+id/bt">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bt_cv"
+        android:layout_margin="@dimen/movie_category_card_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/cover_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:riv_corner_radius="10dp"
+                android:padding="2dp"
+                android:adjustViewBounds="true"
+                android:minHeight="100dp" />
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/title_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="title"
+                android:maxLines="5"
+                android:textSize="12sp"
+                android:gravity="center_horizontal|bottom"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
+                app:layout_constraintTop_toBottomOf="@+id/cover_movie"
+               />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

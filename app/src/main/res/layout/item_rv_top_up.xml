@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/bt_top_up"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_top_up"
+        android:layout_width="@dimen/item_rv_topup_width"
+        android:layout_height="@dimen/item_rv_topup_height"
+        android:layout_margin="10dp"
+        android:background="@drawable/bt_select_top_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/text_days"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="12 เดือน"
+                android:textFontWeight="1000"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_rv_topup"
+                android:textStyle="bold" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/text_update"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:textSize="14sp"
+                android:rotation="45"
+                android:text="Hot"
+                android:layout_marginEnd="-25dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

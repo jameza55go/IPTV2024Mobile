@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bt"
+    android:nextFocusUp="@id/bt_register"
+    android:nextFocusLeft="@id/bt_register"
+    android:nextFocusRight="@id/bt_register"
+    android:nextFocusDown="@id/bt_register"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_page4" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanitbold"
+            android:text="สัมผัสประสบการณ์ดูหนังอย่างจุใจ"
+            android:textColor="@color/orange_main"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/text2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="610dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanitregular"
+            android:gravity="center"
+            android:text="คมชัดระดับ 4K HDR เจ้าแรกในไทย"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/bt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bt_select_style_2"
+            android:layout_marginTop="20dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/kanitregular"
+                android:gravity="center"
+                android:text="@string/bt_register_about"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

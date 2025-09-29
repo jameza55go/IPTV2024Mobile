@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tool.setting.SettingActivity"
+    android:background="@color/black"
+    android:keepScreenOn="true"
+    android:padding="20dp"
+    >
+
+
+    <include
+        android:id="@+id/logo"
+        layout="@layout/layout_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/high_logo"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="8"
+            android:background="@drawable/bg_white_transparent_20_corner"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingStart="30dp"
+                android:text="@string/txt_select"
+                android:textSize="@dimen/point_menu_text_size"
+                android:textColor="@color/white"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/text_menu_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:background="@color/black_transparent2"
+                    android:textColor="@color/white"
+                    android:paddingStart="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/txt_change_password"
+                    android:textSize="@dimen/point_menu_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
+
+                <View
+                    android:visibility="visible"
+                    android:id="@+id/view_menu_change_password"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/orange_main"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_menu_change_password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_menu_change_password" />
+
+                <TextView
+                    android:id="@+id/text_menu_clear_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_transparent2"
+                    android:maxLines="1"
+                    android:paddingStart="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/clear_history"
+                    android:textSize="@dimen/point_menu_text_size"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_menu_change_password"
+                    tools:ignore="RtlSymmetry" />
+
+                <View
+                    android:id="@+id/view_menu_clear_history"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/orange_main"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_menu_clear_history"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_menu_clear_history" />
+
+                <TextView
+                    android:id="@+id/text_menu_clear_fav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_transparent2"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:paddingStart="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/point_menu_text_size"
+                    android:text="@string/clear_fav"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_menu_clear_history"
+                    tools:ignore="RtlSymmetry" />
+
+                <View
+                    android:id="@+id/view_menu_clear_fav"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/orange_main"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_menu_clear_fav"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_menu_clear_fav" />
+
+                <TextView
+                    android:id="@+id/text_menu_activate_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_transparent2"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:paddingStart="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/point_menu_text_size"
+                    android:text="@string/activate_line"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_menu_clear_fav"
+                    tools:ignore="RtlSymmetry" />
+
+                <View
+                    android:id="@+id/view_menu_activate_line"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/orange_main"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_menu_activate_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_menu_activate_line" />
+
+                <TextView
+                    android:id="@+id/text_menu_main_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_transparent2"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:paddingStart="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/point_menu_text_size"
+                    android:text="@string/menu_main_setting"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_menu_activate_line"
+                    tools:ignore="RtlSymmetry" />
+
+                <View
+                    android:id="@+id/view_menu_main_setting"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/orange_main"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_menu_main_setting"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_menu_main_setting" />
+
+                <TextView
+                    android:id="@+id/text_live_player_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_transparent2"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:paddingStart="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="@dimen/point_menu_text_size"
+                    android:text="@string/live_player"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_menu_main_setting"
+                    tools:ignore="RtlSymmetry" />
+
+                <View
+                    android:id="@+id/view_live_player_setting"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/orange_main"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_live_player_setting"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_live_player_setting" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_white_transparent_20_corner"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_topic_textview"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/txt_contact"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/txt_contact_detail1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_contact_contact"
+        android:textColor="@color/orange_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_contact_detail3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent2"
+        android:gravity="center"
+        >
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
